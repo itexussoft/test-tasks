@@ -13,13 +13,11 @@ The first step of this script is to code a buffer decoder. The binary data will 
 ------------ | -------- | -----------------------------------------| --------------------------------- | -----
 Header       | 0        | U8                                       | file_version                      | 0x00
 Header       | [1:2]    | U16                                      | nb_entres                         | n
-             |          |                                          |                                   |
 Entry 0      | [3:6]    | U32                                      | capture_time (unix timestamp)     |
 Entry 0      | [7:8]    | U16                                      | sensor_id                         |
 Entry 0      | [9:10]   | U16                                      | light                             |
 Entry 0      | [11:12]  | U16                                      | soil_moisture                     |
 Entry 0      | [13:14]  | U16                                      | air_temperature                   |
-             |          |                                          |                                   |
 Entry 1      | [15:26]  |                                          | same fields as entry 0            |
 ------------ | -------- | ---------------------------------------- | --------------------------------- | -----
 Entry (n-1)  |          |                                          | same fields as entry 0            |
